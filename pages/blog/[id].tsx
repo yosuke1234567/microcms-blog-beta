@@ -35,7 +35,7 @@ export default function BlogId({ blog }: Props) {
         <article className='px-4 pt-12 pb-24 mx-auto max-w-[720px]'>
           <div className='pb-6 border-b'>
             <h1 className='text-4xl leading-tight font-bold'>{blog.title}</h1>
-            <time dateTime={blog.publishedAt} className='block mt-3 text-gray-500'>
+            <time dateTime={blog.publishedAt} suppressHydrationWarning className='block mt-3 text-gray-500'>
               {new Date(blog.publishedAt).toLocaleString()}
             </time>
           </div>

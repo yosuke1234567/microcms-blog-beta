@@ -15,7 +15,7 @@ export const BlogCard = ({ blog }: Props) => {
                 <h2 className='text-xl font-bold'>
                     <Link href={`/blog/${blog.id}`} className='hover:text-[#331cbf] transition'>{blog.title}</Link>
                 </h2>
-                <time dateTime={blog.publishedAt} className='text-gray-500 text-sm'>{new Date(blog.publishedAt).toLocaleString()}</time>
+                <time dateTime={blog.publishedAt} suppressHydrationWarning className='text-gray-500 text-sm'>{new Date(blog.publishedAt).toLocaleString()}</time>
             </div>
         </li>
     )
