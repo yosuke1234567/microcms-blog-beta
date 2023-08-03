@@ -10,7 +10,7 @@ type Props = {}
 export const MyHeader = (props: Props) => {
     return (
         <header className={logoFont.className + ' sticky top-0 bg-[#ffffff88] backdrop-blur'}>
-            <div className='flex max-w-[1280px] mx-auto p-4'>
+            <div className='flex max-w-[1200px] mx-auto p-4'>
                 <h1 className='text-xl'><Link href='/'>Blog by microCMS</Link></h1>
             </div>
         </header>
