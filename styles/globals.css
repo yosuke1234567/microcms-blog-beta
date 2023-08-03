@@ -2,6 +2,42 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .blog-body {
+    @apply pt-4 pb-12
+  }
+  .blog-body h2 {
+    @apply text-2xl font-bold leading-loose mt-[2em] mb-[1em]
+  }
+  .blog-body h3 {
+    @apply text-xl font-bold leading-loose mt-[2em] mb-[1em]
+  }
+  .blog-body img {
+    @apply block mt-4 mb-8 drop-shadow-lg
+  }
+  .blog-body a {
+    @apply leading-loose underline text-[#331cbf]
+  }
+  .blog-body p {
+    @apply my-4
+  }
+  .blog-body ul {
+    @apply pl-[2em] list-disc
+  }
+  .blog-body li {
+    @apply pl-[0.25em]
+  }
+  .blog-body li::marker {
+    @apply text-gray-400
+  }
+  .blog-body p>code {
+    @apply p-2 rounded bg-[#e7e7f3] text-[#331cbf]
+  }
+  .blog-body blockquote {
+    @apply pl-4 border-l-4 border-gray-400 text-gray-500
+  }
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -17,11 +53,20 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-family: 'Noto Sans JP', sans-serif;
+  line-height: 2;
+  color: #2b2c30;
+  background-color: #fff;
+}
+
+a {
+  color: inherit;
+}
+
+p {
+  line-height: 2;
+}
+
+code {
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
 }
