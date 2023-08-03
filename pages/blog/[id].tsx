@@ -1,4 +1,5 @@
 import { GetStaticProps } from 'next'
+import Image from 'next/image'
 import { client } from '@/libs/client'
 import { Blog } from '..'
 import parse from 'html-react-parser'
@@ -12,6 +13,7 @@ if (Prism.plugins.autoloader) {
   Prism.plugins.autoloader.languages_path =
     'https://unpkg.com/prismjs@1.29.0/components/'
 }
+
 type Props = {
   blog: Blog
 }
@@ -32,9 +34,10 @@ export default function BlogId({ blog }: Props) {
     <>
       <MyHeader />
       <main>
-        <article className='px-4 pt-12 pb-24 mx-auto max-w-[720px]'>
+        <article className='px-4 pt-8 pb-24 mx-auto max-w-[720px]'>
           <div className='pb-6 border-b'>
-            <h1 className='text-4xl leading-tight font-bold'>{blog.title}</h1>
+            <Image className='block' src={blog.eyecatch ? blog.eyecatch.url : ''} width={1200} height={630} alt='' />
+            <h1 className='text-4xl leading-tight font-bold mt-12'>{blog.title}</h1>
             <time dateTime={blog.publishedAt} suppressHydrationWarning className='block mt-3 text-gray-500'>
               {new Date(blog.publishedAt).toLocaleString()}
             </time>

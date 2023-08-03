@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import { client } from '@/libs/client'
 import { MyHeader } from '@/components/MyHeader'
 import { BlogCard } from '@/components/BlogCard'
